@@ -176,7 +176,7 @@ class t_program : public t_doc {
       it=my_copy.find(base_language);
 
       if (it == my_copy.end()) {
-        throw "No generator named '" + base_language + "' could be found!";
+        pwarning(1, ("No generator named '" + base_language + "' could be found!").c_str());
       }
 
       if (sub_index != std::string::npos) {
